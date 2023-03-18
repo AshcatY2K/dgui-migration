@@ -1,0 +1,27 @@
+dg-pagination {
+  display: block;
+  width: 100%;
+  max-width: 100%!important;
+
+  p,
+  select,
+  button {
+    display: inline-block;
+  }
+
+  button {
+    vertical-align: top !important;
+    line-height: 2 !important;
+    padding: 0 1rem !important;
+  }
+
+  p {
+    font-size: .9rem;
+    font-weight: 300;
+  }
+
+  .page-info {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

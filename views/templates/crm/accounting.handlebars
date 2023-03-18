@@ -1,0 +1,98 @@
+{{#section 'head'}}
+<meta name="description" content="A practice management system and CRM for South African Accountants & Auditors.">
+
+<style>
+  .coloured-block.primary { background: #0E7477; }
+  .coloured-block.primary * { color: #fff; }
+  .pseudo-list .list-item:before { top: 0px; }
+  a { text-decoration: underline; }
+  a:hover { color: #fff; text-decoration: none; }
+  #content-top { margin-top: 120px!important }
+
+  @media (max-width: 700px) {
+    #content-top { margin-top: 10px!important }
+  }
+
+  table tbody th:nth-child( n+4 ):nth-child( -n+8 ),
+  table tbody th:nth-child( n+14 ):nth-child( -n+19 ) { background: #E6E6E6; }
+
+  table tbody th,
+  table tbody td {
+    border-right:  1px solid #ccc;
+  }
+
+  table tr:nth-child( 2n ) td:nth-child( n+4 ):nth-child( -n+8 ),
+  table tr:nth-child( 2n ) td:nth-child( n+14 ):nth-child( -n+19 ) { 
+    background: #AFE6E7; 
+  }
+
+  table tr:nth-child( 2n+1 ) td:nth-child( n+4 ):nth-child( -n+8 ),
+  table tr:nth-child( 2n+1 ) td:nth-child( n+14 ):nth-child( -n+19 ) { 
+    background: #7CD5D8; 
+  }
+
+  table tr:nth-child( 2n ) td:nth-child( n+9 ):nth-child( -n+13 ) { 
+    background: #FEEFB9; 
+  }
+
+  table tr:nth-child( 2n+1 ) td:nth-child( n+9 ):nth-child( -n+13 ) { 
+    background: #FDE17E; 
+  }
+
+  table tbody td.ticked i { color:  #0E878E; }
+
+  table tbody tr:nth-child( 2n+1 ) { background: #f2f2f2; }
+
+  .datatable thead th { font-weight: bold; }
+
+  .datatable table td, .datatable table th { padding: 0.4rem 1rem; }
+
+  .accordion-item { border: none; }
+
+  h1, .h1 { font-size: 2.9rem; }
+  h2, .h2 { font-size: 2.2rem; }
+
+  .btn-warning { color: initial!important; background-color: #FDE17E; }
+  .btn-warning:hover { background-color: #B79E58; }
+
+  .reviews p { font-size: 1.3rem; font-weight: 100; }
+
+  .reviews .carousel-inner { height: 150px; }
+
+  .phone {
+    max-width: 150px;
+    position: absolute;
+    right: 50px;
+    bottom: -10px;
+  }
+
+  @media (max-width: 625px) {
+    .reviews .carousel-inner { height: 250px; }
+    .phone { max-width: 23vw; }
+  }
+
+  @media (max-width: 381px) {
+    .reviews .carousel-inner { height: 300px; }
+  }
+</style>
+{{/section}}
+
+<section class="container pt-5 px-5 mb-5 max-width">
+  <p>
+    <b>Dear valued client</b>
+  </p>
+  <p>
+    A server update is currently taking place. This update will, unfortunately, result in the system being down from Saturday at 7:00 for a 24-hour timeframe.<br>
+    We do apologise in advance for the inconvenience. This update is essential to the app’s further development and continued security.
+  </p>
+  <p>
+    Please email support@mydatagrows.com or phone/WhatsApp +27 63 426 0080 if you have any questions.
+  </p>
+  <p>
+    We thank you for your patience and ongoing support.
+  </p>
+</section>
+
+{{#section 'scripts'}}
+  <script src="/js/accounting-template.min.js"></script>
+{{/section}}

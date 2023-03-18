@@ -1,0 +1,29 @@
+ul.stepper.stepper-horizontal {
+    height: 93vh!important;
+    overflow: auto;
+}
+
+li.stepper-step {
+    &.disabled:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        position: relative;
+        top: -63px;
+        display: inline-block;
+    }
+
+    &.disabled,
+    &.disabled .stepper-head  {
+        cursor: not-allowed;
+    }
+
+    &.disabled .stepper-head-text {
+        color: #ccc;
+    }
+
+    &.disabled .stepper-head-icon {
+        background: #ccc;
+    }
+}

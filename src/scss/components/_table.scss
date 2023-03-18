@@ -1,0 +1,331 @@
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+dg-table {
+  position: relative;
+  overflow: auto;
+  overflow: overlay;
+  font-size: .9rem;
+  font-weight: 300;
+  display: inline-block;
+  max-height: calc( 100vh - 150px );
+  max-width: 100%;
+  min-width: 100%;
+  white-space: nowrap;
+  z-index: 1;
+
+  &.show-hidden .hidden button.more-options {
+      background: #e6ffff;
+  }
+
+  &.show-hidden .hidden {
+    display: inline-block!important;
+    background: #e6ffff!important;
+    width: 150px;
+    border: 1px dashed #91dddf;
+  }
+
+  dg-column,
+  dg-cell {
+    display: inline-block;
+    white-space: nowrap;
+    min-width: 50px;
+    border-right: 1px solid $grey-light;
+    background: $light;
+    z-index: 1;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  dg-table-body {
+    position: relative;
+    display: block;
+    background: $light;
+    min-height: 300px;
+  }
+
+  dg-table-header {
+    display: inline-flex;
+    border: 1px solid $grey-light;
+    margin-bottom: -2px;
+    background: #fff;
+    position: sticky;
+    z-index: 5;
+    top: 0;
+
+    &.no-border {
+      border: none;
+    }
+  }
+
+  dg-data-row {
+    border-top: none;
+    display: table;
+    background: $light;
+    border-left: 1px solid $grey-light;
+    border-bottom: 1px solid $grey-light;
+
+    position: relative;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+
+    &:nth-of-type(odd) {
+      dg-column,
+      dg-cell {
+        background: $grey-extra-light;
+      }
+    }
+
+    &.active dg-cell,
+    &:hover dg-cell {
+      background-color: #afe6e7;
+    }
+  }
+
+  dg-column {
+    line-height: 3;
+    position: relative;
+    background: $light;
+    z-index: 1;
+
+    &.hidden button.js-hide-column {
+      display: none;
+    }
+
+    &:not(.hidden) button.js-show-column {
+      display: none;
+    }
+
+    .drag-resize {
+      width: 3px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: col-resize;
+
+      &:hover {
+        background: #AFE6E7;
+      }
+    }
+
+    .lock-column {
+      padding: 0.9rem .3rem 0.9rem .9rem;
+      height: 100%;
+      vertical-align: top;
+      line-height: 3;
+    }
+
+    .name {
+      padding: .9rem 2rem .9rem .6rem;
+      font-weight: 500;
+    }
+
+    button.more-options {
+      border: none;
+      padding: 0 10px;
+      font-size: 1em;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      background: $light;
+    }
+
+    .lock-column {
+      cursor: pointer;
+      display: none;
+    }
+
+    &.checkbox-container,
+    &.chat-container {
+      .name {
+        padding: .9rem .6rem;
+      }
+    }
+
+    &.checkbox-container {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+    }
+
+    &.chat-container + dg-column .lock-column,
+    &.hidden + dg-column .lock-column {
+        display: inline;
+    }
+
+    &.chat-container + dg-column:not( .hidden ) ~ dg-column .lock-column, 
+    &.hidden + dg-column:not( .hidden ) ~ dg-column .lock-column {
+        display: none;
+    }
+
+    &.hidden .lock-column {
+        display: none!important;
+    }
+
+    &.hidden dg-column-options .hide {
+      display: none;
+    }
+
+    &:not(.hidden) dg-column-options .show {
+      display: none;
+    }
+  }
+
+  dg-cell {
+    overflow: hidden;
+    padding: 0.5rem 1.4rem;
+    vertical-align: top;
+    height: 39px;
+
+    &.checkbox-container,
+    &.chat-container {
+      padding: 0;
+      text-align: center;
+    }
+
+    &.checkbox-container {
+      min-width: 30px;
+      padding-top: 0.6rem;
+      position: sticky;
+      left: 0;
+    }
+
+    &.delete-row {
+      padding: 0;
+
+      button {
+        width: 100%;
+        height: 100%;
+        background: #e09555;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      i {
+        color: $light;
+      }
+    }
+
+    &.link-row {
+      padding: 0;
+
+      a {
+        width: 100%;
+        height: 100%;
+        background: #afe6e7;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-align: center;
+        line-height: 3;
+      }
+
+      i {
+        color: $grey-dark;
+      }
+    }
+
+    .open-chat {
+      width: 100%;
+      padding: 10px 0;
+      height: 100%;
+      border-radius: 0;
+    }
+
+    label,
+    select,
+    .form-outline,
+    .form-text,
+    .input-group,
+    .longtext-facade,
+    .form-check {
+      display: none;
+    }
+
+    .btn-sm {
+      padding: 0.2rem 1rem 0.2rem 1rem;
+    }
+
+    .chip {
+      display: inline-block;
+      line-height: 1.8;
+      margin-top: 0;
+      margin-bottom: 0;
+      height: auto;
+      padding: 0rem 0.9rem 0rem 0.9rem;
+      margin-right: 0.5rem;
+    }
+
+    .custom-input {
+      margin: 0!important;
+    }
+
+    .display-wrapper {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  dg-column.lock,
+  dg-cell.lock {
+    position: sticky;
+    z-index: 2;
+  }
+
+  dg-column.lock,
+  dg-cell.lock {
+    left: 0;
+  }
+
+  .checkbox-container ~ dg-column.lock,
+  .checkbox-container ~ dg-cell.lock {
+    left: 30px;
+  }
+
+  dg-column.fixed-cell.checkbox-container,
+  dg-cell.lock {
+    z-index: 4;
+    top:  0;
+  }
+
+  .checkbox-container {
+    min-width: 30px;
+
+    input {
+      vertical-align: middle;
+    }
+  }
+
+  .chat-container {
+    min-width: 30px;
+  }
+
+  .table-inner {
+  }
+}
+
+dg-app[embedded] {
+  dg-table {
+    max-height: calc(100vh - 245px);
+  }
+
+  dg-breadcrumb {
+    display: none;
+  }
+}

@@ -1,0 +1,115 @@
+@keyframes slidein {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0%;
+  }
+}
+
+.chat-messages .date-seperator .date {
+    text-align: center;
+    display: inline-block;
+    margin-top: -27px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+}
+
+.chat-container {
+    .open-chat {
+        width: 100%;
+        padding: 10px 0;
+        height: 100%;
+        display: block;
+        border-radius: 0;
+    }
+}
+
+th.chat-container {
+    z-index: 3;
+    position: sticky!important;
+    top: 0;
+    background: #fff;
+}
+
+.chat-message {
+    &.me {
+        text-align: right;
+
+        .message {
+            background: #dedede;
+            border-radius: 9px 0 9px 9px;
+        }
+    }
+
+    &.slide-in {
+        right: 0%;
+        position: relative;
+        animation-duration: 1.25s;
+        animation-name: slidein;
+    }
+
+    .header {
+        font-size: 0.8rem;
+    }
+
+    .message {
+        background: #afe6e7;
+        background: linear-gradient(45deg, rgba(75,196,201,0.5) 0%, rgba(175,230,231,0.5) 100%);
+        color: #262626;
+        display: inline-block;
+        border-radius: 0 9px 9px 9px;
+    }
+
+    .date-seperator {
+        text-align: center;
+
+        hr {
+            margin-bottom: 0;
+        }
+    }
+
+    .date {
+        background: #fff;
+        padding: 0 8px;
+        z-index: 19;
+        top: -13px;
+        position: relative;
+    }
+}
+
+#chatModal {
+    border: 1px solid #cbcbcb;
+    border-radius: 4px;
+    max-height: 400px;
+    height: auto!important;
+    overflow: hidden;
+
+    .modal-body {
+        max-height: 274px;
+        overflow-x: hidden;
+    }
+
+    .modal-dialog {
+        position: relative;
+    }
+
+    .modal-header {
+        background: #afe6e7;
+    }
+
+    .modal-footer {
+        background: #bdb9b9;
+    }
+}
+
+.datatable thead th.chat-container {
+    width: 45px;
+    padding: 0!important;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 50px;
+}

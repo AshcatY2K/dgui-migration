@@ -1,0 +1,46 @@
+filter-group {
+  border: 1px solid #00000017;
+  background: #00000008;
+
+  filter-group .js-remove-group {
+    display: block;
+  }
+
+  .btn-info {
+    background: $grey;
+  }
+}
+
+filter-group,
+table-filter {
+  display: block;
+
+  .js-remove-group {
+    display: none;
+  }
+}
+
+filter-group .group-operator-container,
+table-filter .operator-container {
+  display: none;
+}
+
+filter-group + table-filter,
+filter-group + filter-group,
+table-filter + filter-group,
+table-filter + table-filter {
+  margin-top: 45px;
+
+  > div > .group-operator-container {
+    display: block;
+    position: absolute;
+    margin-top: -42px;
+    margin-left: -10px;
+  }
+
+  > .operator-container {
+    display: block;
+    position: absolute;
+    margin-top: -51px;
+  }
+}

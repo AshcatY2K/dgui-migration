@@ -1,0 +1,35 @@
+// W3C standard/Firefox-only
+* {
+  scrollbar-width: thin;
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color
+  scrollbar-color: $grey transparent;
+}
+
+// Chrome/Edge/Safari
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-corner {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $grey;
+  border-radius: 20px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.more-width::-webkit-scrollbar:hover {
+  background: $grey-light;
+}
+
+.more-width::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}

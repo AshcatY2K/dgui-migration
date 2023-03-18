@@ -1,0 +1,47 @@
+:where([data-component*="dialog"]) {
+  --dlg-gap: 1em;
+  background: var(--dlg-bg, #fff);
+  border: var(--dlg-b, 0);
+  border-radius: var(--dlg-bdrs, 0.25em);
+  box-shadow: var(--dlg-bxsh, 0px 25px 50px -12px rgba(0, 0, 0, 0.25));
+  font-family:var(--dlg-ff, ui-sansserif, system-ui, sans-serif);
+  min-inline-size: var(--dlg-mis, auto);
+  padding: 0;
+  width: var(--dlg-w, fit-content);
+  max-width: 400px;
+
+  menu {
+    padding: 10px 20px 10px 20px;
+    border-top: 1px solid #e3e3e3;
+    margin-bottom: 0;
+  }
+
+  fieldset {
+    padding: 20px 20px 0 20px;
+  }
+}
+
+:where([data-component="no-dialog"]:not([hidden])) {
+  display: block;
+  inset-block-start: var(--dlg-gap);
+  inset-inline-start: 50%;
+  position: fixed;
+  transform: translateX(-50%);
+}
+
+:where([data-component*="dialog"] [data-ref="template"]:not(:empty)) {
+  margin-block-end: var(--dlg-gap);
+  width: 100%;
+}
+/* hack for Firefox */
+@-moz-document url-prefix() { 
+  [data-component="no-dialog"]:not([hidden]) {
+    inset-inline-start: 0;
+     transform: none;
+  }
+}
+/* added to `body` when browser do not support `<dialog>` */
+.dialog-open {
+  background-color: rgba(0, 0, 0, .1);
+  overflow: hidden;
+}

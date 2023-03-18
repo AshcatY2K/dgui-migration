@@ -1,0 +1,715 @@
+@import "./../core/_color";
+
+body.-dark {
+  color: $grey-extra-light!important;
+  background-color: $grey-extra-dark!important;
+}
+
+.-dark {
+  dg-app {
+    background: $grey-extra-dark!important;
+  }
+  
+  .card.floating-panel,
+  footer,
+  .component-panel,
+  .grid-stack,
+  .table-editor table,
+  .table-editor__pagination,
+  div#main-loader,
+  #sidenav-inner .text-center,
+  ul.sidenav-menu.-top,
+  .nav-item [data-group],
+  select option {
+    color: $grey-extra-light!important;
+    background: $grey-dark!important;
+  }
+
+  .popconfirm {
+    color: $grey-extra-light!important;
+    background: $grey!important;
+    border: 1px solid $grey;
+  }
+
+  dg-database-list._horizontal {
+    background: $grey-extra-dark!important;
+  }
+
+  .datatable,
+  .options ul.sub-list,
+  span.options {
+    color: $grey-extra-light!important;
+    background: none;
+  }
+
+  #main-content, {
+    color: $grey-extra-light!important;
+    background-color: $grey-extra-dark;
+  }
+
+  span.options,
+  .options ul.sub-list {
+    border: 1px solid $grey-extra-dark;
+  }
+
+  .card-body,
+  .card,
+  #sidenav-inner,
+  .sidenav-menu,
+  #sidenav-inner .more-options {
+    color: $grey-extra-light!important;
+    background-color: $grey-extra-dark!important;
+  }
+
+  .contextMenu button,
+  .dropdown-menu li,
+  span.options button {
+    color: $grey-extra-light!important;
+    background: $grey-dark!important;
+    border-bottom-color: $grey!important;
+  }
+
+  .navbar-nav a.dropdown-item[disabled],
+  .navbar-nav button.dropdown-item[disabled] {
+    background: $grey;
+  }
+
+  input,
+  textarea,
+  select {
+    background: transparent!important;
+    color: $grey-extra-light!important;
+  }
+
+  .modal-content {
+    color: $grey-extra-light!important;
+    background: $grey-extra-dark!important;
+    border: 1px solid $grey!important;
+  }
+
+  .modal-body {
+    background: $grey-dark!important;
+  }
+
+  *,
+  nav#sidenav-inner,
+  .btn-close,
+  i.fas.fa-expand,
+  .options button *,
+  span.tox-mbtn__select-label,
+  button.tox-tbtn.tox-tbtn--select.tox-tbtn--bespoke *,
+  button.tox-mbtn.tox-mbtn--select *,
+  .tox .tox-mbtn:hover:not(:disabled):not(.tox-mbtn--active) *,
+  .table-editor__pagination-buttons button *,
+  .p-3.all-databases .fa,
+  .icon-facebook,
+  .icon-youtube,
+  .list-group-item,
+  .icon-instagram,
+  .chip.btn-info,
+  .btn-info,
+  .btn-info *,
+  hr,
+  button#slim-toggler .fa:before,
+  button .fas:before,
+  .far:before,
+  dg-cell .fas:before {
+    color: $grey-extra-light!important;
+  }
+
+  .grid-stack-item-content,
+  .expand-panel,
+  #slim-toggler,
+  .nav-tabs .nav-item.show .nav-link,
+  .nav-tabs .nav-link.active,
+  .datatable .table-editor__inner,
+  .table-editor.striped tbody tr:nth-of-type(odd) {
+    background: $grey-extra-dark!important;
+  }
+
+  button.btn-primary:hover,
+  .btn-info[aria-disabled] {
+    color: initial!important;
+  }
+
+  .dropdown-item:hover:not([disabled]), 
+  .dropdown-item:focus:not([disabled]),
+  .contextMenu button:hover,
+  span.options button:hover,
+  .table-editor.striped tbody tr:nth-of-type(odd):hover,
+  .table-editor.hover tbody tr:hover,
+  .table-editor.hover tbody tr.active,
+  .table-editor.hover tbody tr.active *,
+  .form-check-input[type=checkbox]:checked,
+  .btn-info:focus,
+  .btn-info {
+    background: #007B87!important;
+  }
+
+  .btn-info .close *,
+  .btn-info:focus, 
+  button:hover *,
+  .btn-info:disabled,
+  .btn-info:disabled span,
+  button.btn-info:disabled .fas:before,
+  button.btn.btn-primary:hover *,
+  .nav-tab-sub-content li:hover * {
+    color: $grey-dark!important;
+  }
+
+  button.btn-warning .fas:before {
+    color: $light!important;
+  }
+
+  .btn-close {
+    background: transparent url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z' fill='%23ffffff'/></svg>") 50%/1em auto no-repeat;
+  }
+
+  .bg-info {
+    color: $grey-dark!important;
+  }
+
+  .chip {
+    background: $grey;
+  }
+
+  dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: $grey;
+  }
+
+  .btn-info[aria-disabled="true"]:focus,
+  .btn-info[aria-disabled="true"],
+  .btn-info:disabled:focus,
+  .btn-info:disabled,
+  .btn-info[disabled],
+  .form-check-input[type=checkbox],
+  .nav-tab-sub-content li:hover {
+    background: $grey-extra-light!important;
+  }
+
+  .navbar {
+    background: $grey-extra-dark!important;
+  }
+
+  .datatable[data-dg-embedded] .table-editor__inner {
+    background: $grey-light;
+  }
+
+  dg-table dg-data-row:nth-of-type(odd).active dg-cell,
+  dg-table dg-data-row:nth-of-type(odd):hover dg-cell,
+  dg-table dg-data-row.active dg-cell, 
+  dg-table dg-data-row:hover dg-cell {
+    background-color: #007b87!important;
+  }
+
+  dg-table,
+  dg-table dg-table-body,
+  .select-dropdown.open {
+    background: $grey-dark;
+  }
+
+  .select-option {
+    border-bottom: 1px solid $grey;
+
+    &.selected {
+      background-color: $grey-extra-dark!important;
+    }
+
+    &:hover:not(.disabled) {
+      background: $grey-dark;
+    }
+
+    &.selected.active,
+    &.active,
+    &:hover {
+      background: #007b87!important;
+    }
+  }
+
+  dg-table-item._active:not(:hover) {
+    background: $grey-dark!important;
+  }
+
+  .nav-tabs .nav-item.show .nav-link,
+  .nav-tabs .nav-link.active {
+    border-color: #AFE6E7!important;
+  }
+
+  .nav-tabs .nav-link:hover {
+    color: initial!important;
+    background: #AFE6E7!important;
+  }
+
+  .group-label {
+    background: $grey-extra-dark;
+  }
+
+  button.tox-mbtn.tox-mbtn--select.tox-mbtn--active *,
+  button.tox-mbtn.tox-mbtn--select *,
+  button:hover i.fas,
+  button#slim-toggler:hover .fa,
+  .tox .tox-tbtn:hover *,
+  .datepicker-toggle-button:hover *,
+  .expand-panel:hover *,
+  #slim-toggler:hover *,
+  .list-group-item,
+  .p-3.all-databases .fa {
+    background: none!important;
+  }
+
+  .card-header {
+    border-bottom: 1px solid;
+  }
+
+  .modal-header, 
+  .modal-footer,
+  .table-editor__pagination,
+  .sidenav .text-center,
+  nav#sidenav-inner,
+  dg-cell,
+  dg-column,
+  dg-data-row,
+  dg-table-header,
+  .floating-panel.primary,
+  .card-header,
+  .grid-stack-item-content,
+  .expand-panel,
+  #slim-toggler {
+    border-color: darken( $grey, 20% )!important;
+  }
+
+  #slim-toggler:hover,
+  .expand-panel:hover {
+    background: $grey-light!important;
+  }
+
+  .form-container .grid-stack {
+    background: $grey-extra-dark!important;
+    background-size: 10px 10px, 8.33% 70px!important;
+    background-image: linear-gradient(to bottom, transparent 5px, $grey-extra-dark 5px), 
+      linear-gradient(to right, $grey-extra-light 1px, transparent 1px), 
+      linear-gradient(to right, transparent 5px, $grey-extra-dark 5px), 
+      linear-gradient(to bottom, $grey-extra-light 1px, transparent 1px)!important;
+  }
+
+  .tab-container.-sub {
+    z-index: 99;
+  }
+
+  .nav-tab-sub-content {
+    background: $grey-extra-dark;
+  }
+
+  .btn-info:hover {
+    background: #AFE6E7!important;
+    color: initial!important;
+  }
+
+  .file-upload-preview {
+    background: $grey-extra-dark;
+  }
+
+  .btn.btn-flat {
+    background: $grey-extra-light;
+    color: $grey-dark!important;
+  }
+
+  .datepicker-dropdown-container, 
+  .datepicker-modal-container,
+  .timepicker-elements {
+    background: $grey-dark;
+  }
+
+  .datepicker-modal-container button:hover {
+    background: #007b87;
+  }
+
+  .datepicker-cell:not(.disabled):not(.selected):hover .datepicker-cell-content {
+    background-color: #007b87;
+  }
+
+  .timepicker-clock.timepicker-clock-animation {
+    background: $grey-extra-dark;
+  }
+
+  .datepicker-footer,
+  .timepicker-footer,
+  .datepicker-modal-container .datepicker-footer button {
+    background: #007b87;
+  }
+  
+  .datepicker-footer {
+    border-radius: 0 0 8px 8px;
+  }
+
+  .datepicker-modal-container .datepicker-footer button {
+    margin-bottom: 0;
+  }
+
+  .filter-container {
+    background: $grey-extra-dark;
+  }
+
+  .datepicker-main {
+    border: 1px solid $grey-light;
+  }
+
+  .datepicker-modal-container .datepicker-main {
+    border: none;
+  }
+
+  .datepicker-dropdown-container {
+    background: $grey-dark;
+  }
+
+  .btn-primary {
+    background: #AFE6E7!important;
+    color: initial!important;
+  }
+
+  .btn-primary,
+  .btn-primary *,
+  .btn-primary .fas:before {
+    color: initial!important;
+  }
+
+  span.options button.option-sort:hover * {
+    color: $grey-extra-light!important;
+  }
+
+  .ps .ps__rail-x.ps--clicking, .ps .ps__rail-x:focus, 
+  .ps .ps__rail-x:hover, 
+  .ps .ps__rail-y.ps--clicking, 
+  .ps .ps__rail-y:focus, 
+  .ps .ps__rail-y:hover {
+    background-color: $grey-light;
+  }
+
+  .ps__rail-x.ps--clicking .ps__thumb-x, 
+  .ps__rail-x:focus>.ps__thumb-x, 
+  .ps__rail-x:hover>.ps__thumb-x,
+  .ps__rail-y.ps--clicking .ps__thumb-y, 
+  .ps__rail-y:focus>.ps__thumb-y, 
+  .ps__rail-y:hover>.ps__thumb-y {
+    background-color: $grey-dark;
+  }
+
+  .tooltip-inner {
+    color: $grey-extra-light;
+    background-color: $grey-dark;
+    border: 1px solid $grey-light;
+  }
+
+  div.tooltip:before {
+    border-right-color: $grey-light!important;
+  }
+
+  div.tooltip[data-popper-placement='top']:after {
+    border-top-color: $grey-light!important;
+  }
+
+  .alert-warning {
+    background: #E09555;
+  }
+
+  .datatable tr td:last-child i:before {
+    color: initial!important;
+  }
+
+  .form-outline .form-control[disabled],
+  .input-group .form-control[disabled] {
+    background-color: $grey-dark!important;
+    color: $grey !important;
+  }
+
+  .datepicker-view-change-button:focus, 
+  .datepicker-view-change-button:hover,
+  .datepicker-next-button:focus, 
+  .datepicker-next-button:hover,
+  .datepicker-previous-button:focus, 
+  .datepicker-previous-button:hover {
+    background: #007b87;
+  }
+
+  .sortable-item {
+    background-color: $grey-dark!important;
+  }
+
+  .is-invalid~.invalid-feedback,
+  .invalid~.invalid-feedback,
+  .was-validated :invalid~.invalid-feedback,
+  .is-invalid~.invalid-tooltip,
+  .was-validated :invalid~.invalid-tooltip {
+    color: $grey-extra-dark!important;
+  }
+
+  .popover {
+    border: 1px solid $grey-extra-light;
+  }
+
+  .popover,
+  .popover-header {
+    background: $grey-extra-dark;
+    border-color: $grey;
+  }
+
+  dg-column.chat-container {
+    background: $grey-extra-dark;
+  }
+
+  .chat-message .message {
+    background: #007b87;
+    background: linear-gradient(61deg, rgba(0,123,135,1) 0%, rgba(44,163,160,1) 100%);
+    color: $grey-extra-light!important;
+  }
+
+  .chat-message.me .message {
+    background: $grey;
+    color: $grey-extra-light!important;
+  }
+
+  .chat-messages .date {
+    background: $grey-extra-dark;
+  }
+
+  #chatModal .modal-body {
+    background: $grey-extra-dark!important;
+  }
+
+  #chatModal {
+    border: 1px solid $grey;
+    border-radius: 4px;
+  }
+
+  #chatModal .modal-header {
+    background: #007b87;
+  }
+
+  #chatModal .modal-footer {
+    background: $grey-dark;
+  }
+
+  ul.autocomplete-items-list {
+    background: $grey-extra-dark;
+  }
+
+  .autocomplete-item.active, 
+  .autocomplete-item:hover:not(.disabled) {
+    background-color: $grey-extra-dark;
+  }
+
+  .table.draggable-row {
+    .js-toggle-show.fa-eye:before {
+      color: #afe6e7;
+    }
+  }
+
+  filter-group {
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255,255,255,.09);
+  }
+
+  .btn-check:checked+.btn-info {
+    color: $dark!important;
+    background-color: #61cdf1!important;
+  }
+
+  .daterangepicker {
+    background-color: $grey-extra-dark;
+  }
+
+  .daterangepicker .calendar-table {
+    background-color: $grey;
+  }
+
+  .daterangepicker td.off, 
+  .daterangepicker td.off.in-range, 
+  .daterangepicker td.off.start-date, 
+  .daterangepicker td.off.end-date {
+    background-color: #afe6e7;
+    color: $grey-extra-dark !important;
+  }
+
+  .daterangepicker td.active, 
+  .daterangepicker td.active:hover {
+    background-color: #007b87;
+  }
+
+  .daterangepicker .calendar-table {
+    border: none;
+  }
+
+  .navbar-toggler i {
+    color: $grey-extra-light!important;
+  }
+
+  .datatable.show-hidden th.hidden, 
+  .datatable.show-hidden td.hidden {
+    background: $grey;
+    border: 1px dashed $grey-extra-dark;
+  }
+
+  .accordion-item {
+    background-color: $grey-extra-dark;
+  }
+
+  .accordion-button {
+    background-color: $grey-extra-dark;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: #007b87;
+  }
+
+  .accordion-button {
+    border-radius: 0;
+  }
+
+  .accordion-header {
+    border-bottom: 1px solid $grey;
+  }
+
+  .accordion-button::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+  }
+
+  .accordion-body {
+    background: $grey-dark;
+  }
+
+  dg-column button.more-options {
+    background: $grey-extra-dark;
+  }
+
+  .datatable.show-hidden .hidden button.more-options {
+    background: $grey;
+  }
+
+  span.timepicker-time-tips-hours.disabled,
+  span.timepicker-time-tips-minutes.disabled {
+    background: $grey;
+  }
+
+  .btn-link:hover, 
+  .btn-link:hover i:before,
+  .btn-link:focus, 
+  .btn-link:focus i:before {
+    background: none!important;
+    color: $light!important;
+  }
+
+  filter-group .btn-info {
+    background: $grey-extra-dark!important;
+  }
+
+  .user-popup {
+    a {
+      color: #afe6e7!important;
+    }
+
+    .modal-title {
+      color: initial!important;
+    }
+
+    .modal-footer {
+      background: $grey-dark;
+    }
+  }
+
+  dg-table dg-table-header dg-column {
+    background: $grey-extra-dark;
+  }
+
+  dg-table dg-data-row dg-cell {
+    background: $grey-dark;
+  }
+
+  dg-table dg-data-row:nth-of-type(odd) dg-cell {
+    background: $grey-extra-dark;
+  }
+
+  dg-table dg-column.hidden,
+  dg-table dg-cell.hidden {
+    background: $grey-light!important;
+    color: $grey-extra-dark!important;
+  }
+
+  dg-table dg-column.hidden .name{
+    background: $grey-light!important;
+    color: $grey-extra-dark!important;
+  }
+
+  dg-table dg-column.hidden dg-column-options .more-options {
+    background: $grey-light!important;
+    color: $grey-extra-dark!important;
+  }
+
+  .file-upload-cloud-icon,
+  p.file-upload-default-message {
+    color: $grey-extra-dark!important;
+  }
+
+  .sidenav-link:hover {
+    background: #007b87;
+    border-radius: 0;
+  }
+
+  dg-filter-link {
+    .name {
+      background: $grey-dark;
+    }
+
+    .remove {
+      background: $grey-extra-dark;
+      border-radius: 0!important;
+    }
+  }
+
+  dialog {
+    background: #393939;
+  }
+  
+  .toast-body {
+    background: #404040;
+  }
+
+  dg-filter-link:hover .name {
+    background: #007b87;
+  }
+
+  // W3C standard/Firefox-only
+  * {
+    scrollbar-width: thin;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color
+    scrollbar-color: $grey-dark transparent;
+  }
+
+  // Chrome/Edge/Safari
+  *::-webkit-scrollbar-thumb {
+    background-color: $grey;
+  }
+
+  *::-webkit-scrollbar-track,
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+    border: none;
+  }
+
+  .more-width::-webkit-scrollbar:hover {
+    background: $grey-extra-dark;
+  }
+
+  .navbar .breadcrumb .breadcrumb-item+.breadcrumb-item:before {
+    color: $grey;
+  }
+
+  dg-table dg-cell.link-row a i:before {
+    color: $grey-dark!important;
+  }
+
+  .dragging,
+  .draggable-row tr.moved {
+    background: $grey-dark;
+  }
+}

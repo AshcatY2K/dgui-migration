@@ -1,0 +1,141 @@
+.complex-list {
+    > li .list-item-highlight:before {
+        content: "";
+        width: 3px;
+        height: 20px;
+        position: absolute;
+        display: inline-block;
+        margin-left: -8px;
+        margin-top: 6px;
+    }
+
+    > li:nth-child( 3n+1 ) .list-item-highlight:before {
+        background: #7CD5D8;
+    }
+
+    > li:nth-child( 3n+2 ) .list-item-highlight:before {
+        background: #1EABB7;
+    }
+
+    > li:nth-child( 3n+3 ) .list-item-highlight:before {
+        background: #117377;
+    }
+
+    > li.disabled {
+        cursor: not-allowed;
+
+        .list-item-highlight {
+            color: #8c8c8c;
+
+            &:before {
+                background: #707070;
+            }
+        }
+    }
+
+    .complex-list > li {
+        &[data-group]:not(.group) {
+            padding-left: 20px;
+        }
+
+        &:not([data-group]) + li[data-group] {
+            padding-left: 0;
+        }
+
+        &:nth-child( 3n+1 ) .list-item-highlight:before {
+            background: #DE989C;
+        }
+
+        &:nth-child( 3n+2 ) .list-item-highlight:before {
+            background: #DA4543;
+        }
+
+        &:nth-child( 3n+3 ) .list-item-highlight:before {
+            background: #AC3034;
+        }
+
+        &[data-group]:nth-child( 3n+2 ) .list-item-highlight:before {
+            background: #FDE17E;
+        }
+
+        &[data-group]:nth-child( 3n+3 ) .list-item-highlight:before {
+            background: #E5C681;
+        }
+
+        &[data-group]:nth-child( 3n+4 ) .list-item-highlight:before {
+            background: #B79E58;
+        }
+
+        .list-item-highlight.highlight,
+        .list-item-highlight:hover {
+            background: #c9c9c929;
+        }
+    }
+
+    .loader {
+        position: relative;
+        margin: auto;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 2rem;
+    }
+}
+
+ul.complex-list ul.complex-list {
+  padding-right: 0;
+  width: 100%;
+}
+
+.complex-list li .list-item-highlight {
+    display: block;
+    position: relative;
+}
+
+.complex-list li,
+li.list-item:before {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.complex-list.collapsed li,
+.complex-list .complex-list.collapsed li.list-item:before {
+    overflow: hidden;
+    opacity: 0;
+}
+
+.complex-list.collapsed li,
+.complex-list li.collapsed {
+    display: none!important;
+}
+
+.complex-list li.transition {
+    display: list-item!important;
+}
+
+.complex-list .complex-list li.list-item:before {
+    content: "";
+    width: 14px;
+    height: 2.9rem;
+    display: inline-block;
+    border-left: 1px solid #DCDBDB;
+    border-bottom: 1px solid #DCDBDB;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -25px;
+}
+
+.complex-list .complex-list li.list-item:first-child:before {
+    height: 1.5rem;
+    margin-top: -9px;
+}
+
+.complex-list .complex-list li.list-item:last-child:before {
+    border: none;
+}
+
+.complex-list .complex-list > li[data-group]:not(.group):before {
+    width: 35px;
+    margin-left: -40px;
+    border-bottom: none;
+}

@@ -1,0 +1,68 @@
+.is-invalid~.invalid-feedback, 
+.was-validated :invalid~.invalid-feedback {
+    background: #ffa900;
+    color: #fff;
+    z-index: 1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    right: 15px;
+}
+
+.is-invalid~.invalid-tooltip,  
+.was-validated :invalid~.invalid-tooltip {
+    background: #ffa900;
+    top: 16px;
+    right: 15px;
+}
+
+.is-invalid~.input-group .invalid-feedback, 
+.was-validated .input-group :invalid~.invalid-feedback {
+    top: -20px;
+}
+
+.form-outline .form-control.is-invalid~.form-label, 
+.was-validated .form-outline .form-control:invalid~.form-label,
+.was-validated .form-control:invalid~.select-arrow {
+    color: #ffa900;
+}
+
+.form-outline .form-control.is-invalid~.form-notch .form-notch-leading, 
+.form-outline .form-control.is-invalid~.form-notch .form-notch-middle, 
+.form-outline .form-control.is-invalid~.form-notch .form-notch-trailing, 
+.form-select.is-invalid,
+.form-control.is-invalid,
+.was-validated .form-control:invalid,
+.was-validated .form-outline .form-control:invalid~.form-notch .form-notch-leading, 
+.was-validated .form-outline .form-control:invalid~.form-notch .form-notch-middle, 
+.was-validated .form-outline .form-control:invalid~.form-notch .form-notch-trailing, 
+.was-validated .form-select:invalid {
+    border-color: #ffa900;
+}
+
+.form-outline .form-control.is-valid~.form-notch .form-notch-leading, 
+.form-outline .form-control.is-valid~.form-notch .form-notch-middle, 
+.form-outline .form-control.is-valid~.form-notch .form-notch-trailing, 
+.form-select.is-valid, .was-validated .form-outline .form-control:valid~.form-notch .form-notch-leading, 
+.was-validated .form-outline .form-control:valid~.form-notch .form-notch-middle, 
+.was-validated .form-outline .form-control:valid~.form-notch .form-notch-trailing, 
+.was-validated .form-select:valid {
+    border-color: #007b87;
+}
+
+.form-outline .form-control.is-valid~.form-label, 
+.was-validated .form-outline .form-control:valid~.form-label {
+    color: #007b87;
+}
+
+.form-control.is-valid, 
+.was-validated .form-control:valid, 
+.was-validated .form-control:invalid {
+    margin-bottom: 0;
+}
+
+.is-valid~.valid-feedback, 
+.is-valid~.valid-tooltip, 
+.was-validated :valid~.valid-feedback, 
+.was-validated :valid~.valid-tooltip {
+    display: none;
+}

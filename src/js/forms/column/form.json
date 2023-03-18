@@ -1,0 +1,395 @@
+[
+  {
+    "id": "name",
+    "columnName": "Name",
+    "type": "text",
+    "mandatory": true
+  }, 
+  {
+    "id": "type",
+    "columnName": "Type",
+    "type": "drop down list",
+    "dropdownValues": [
+      {
+        "secondaryText": "X / &check;",
+        "label": "Checkbox",
+        "value": "checkbox"
+      }, {
+        "secondaryText": "24-hour clock or 12-hour clock",
+        "label": "Clock",
+        "value": "clock"
+      }, {
+        "secondaryText": "Money",
+        "label": "Currency",
+        "value": "currency"
+      }, {
+        "secondaryText": "Different formats for displaying dates",
+        "label": "Date",
+        "value": "date"
+      }, {
+        "secondaryText": "Date & time in one column",
+        "label": "Date time",
+        "value": "date time"
+      }, {
+        "secondaryText": "A comma separated list of choices, each choice max 250 characters",
+        "label": "Drop down list",
+        "value": "drop down list"
+      }, {
+        "secondaryText": "Attach authorized sites and pages",
+        "label": "Embedded",
+        "value": "embedded"
+      }, {
+        "secondaryText": "Add a column from another table to this table",
+        "label": "From table",
+        "value": "from table"
+      }, {
+        "secondaryText": "Add a link to another website",
+        "label": "Hyperlink",
+        "value": "hyperlink"
+      }, {
+        "secondaryText": "Up to 2000 characters",
+        "label": "Longtext",
+        "value": "longtext"
+      }, {
+        "secondaryText": "May contain +, -, (), x and numbers",
+        "label": "Phone number",
+        "value": "phone number"
+      }, {
+        "secondaryText": "25 digits total, with 5 digits after the decimal",
+        "label": "Number",
+        "value": "number"
+      }, {
+        "secondaryText": "Up to 250 characters",
+        "label": "Text",
+        "value": "text"
+      }, {
+        "secondaryText": "Hours, minutes and seconds",
+        "label": "Timer",
+        "value": "timer"
+      } 
+    ],
+    "default value": "text",
+    "mandatory": true
+  },
+  {
+    "id": "date-format",
+    "columnName": "Date format",
+    "type": "drop down list",
+    "dropdownValues": [
+      {
+        "secondaryText": "eg. 25-06-2015",
+        "label": "dd-mm-yyyy",
+        "value": "dd-mm-yyyy"
+      }, {
+        "secondaryText": "eg. 06-25-2015",
+        "label": "mm-dd-yyyy",
+        "value": "mm-dd-yyyy"
+      }, {
+        "secondaryText": "eg. 2015-06-25",
+        "label": "yyyy-mm-dd",
+        "value": "yyyy-mm-dd"
+      }, {
+        "secondaryText": "eg. 2015-25-06",
+        "label": "yyyy-dd-mm",
+        "value": "yyyy-dd-mm"
+      }, {
+        "secondaryText": "eg. 25/06/2015",
+        "label": "dd/mm/yyyy",
+        "value": "dd/mm/yyyy"
+      }, {
+        "secondaryText": "eg. 06/25/2015",
+        "label": "mm/dd/yyyy",
+        "value": "mm/dd/yyyy"
+      }, {
+        "secondaryText": "eg. 2015/06/25",
+        "label": "yyyy/mm/dd",
+        "value": "yyyy/mm/dd"
+      }, {
+        "secondaryText": "eg. 2015/25/06",
+        "label": "yyyy/dd/mm",
+        "value": "yyyy/dd/mm"
+      }, {
+        "secondaryText": "eg. 25 June 2015",
+        "label": "date month year",
+        "value": "dd mmmm yyyy"
+      }, {
+        "secondaryText": "eg. June 25 2015",
+        "label": "month date year",
+        "value": "mmmm dd yyyy"
+      }, {
+        "secondaryText": "eg. 2015 25 June",
+        "label": "year date month",
+        "value": "yyyy dd mmmm"
+      }, {
+        "secondaryText": "eg. 2015 June 25",
+        "label": "year month date",
+        "value": "yyyy mmmm dd"
+      }, {
+        "secondaryText": "eg. Thursday, 25 06 2015",
+        "label": "day, date month year",
+        "value": "dddd, dd mmmm yyyy"
+      }
+    ],
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "date, date time",
+        "action": "hide"
+      }
+    ],
+    "default value": "dd mmmm yyyy",
+    "mandatory": true
+  },
+  {
+    "id": "timer-format",
+    "columnName": "Timer format",
+    "type": "drop down list",
+    "dropdownValues": [
+      {
+        "secondaryText": "eg. 12:34, 23:12",
+        "label": "hh:mm",
+        "value": "hh:mm"
+      }, {
+        "secondaryText": "eg. 12:34:34, 23:12:56",
+        "label": "hh:mm:ss",
+        "value": "hh:mm:ss"
+      }
+    ],
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "timer",
+        "action": "hide"
+      }
+    ],
+    "default value": "hh:mm",
+    "mandatory": true
+  }, 
+  {
+    "id": "clock-format",
+    "columnName": "Clock format",
+    "type": "drop down list",
+    "dropdownValues": [
+      {
+        "secondaryText": "eg. 12:34, 15:12",
+        "label": "hh:mm",
+        "value": "hh:mm"
+      }, {
+        "secondaryText": "eg. 12:34 AM, 09:12 PM",
+        "label": "hh:mm a",
+        "value": "hh:mm a"
+      }
+    ],
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "clock, date time",
+        "action": "hide"
+      }
+    ],
+    "default value": "hh:mm a",
+    "mandatory": true
+  }, 
+  {
+    "id": "drop-down-values",
+    "columnName": "Drop down values",
+    "type": "text",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "drop down list,drop down list multi select",
+        "action": "hide"
+      }
+    ],
+    "mandatory":  true,
+    "helper-text": "Enter a comma seperated list of values"
+  }, 
+  {
+    "id": "default-value",
+    "columnName": "Default value",
+    "type": "text",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "in",
+        "value": "from table",
+        "action": "hide"
+      }
+    ]
+  }, 
+  {
+    "id": "is-multi-select",
+    "columnName": "Select multiple values",
+    "type": "checkbox",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "drop down list",
+        "action": "hide"
+      }
+    ]
+  }, 
+  {
+    "id": "input-mask",
+    "columnName": "Input mask",
+    "type": "text",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "text",
+        "action": "hide"
+      }
+    ],
+    "after html": "<a aria-label='more information' href='https://www.mydatagrowsblog.com/post/input-mask-explained' target='_blank'><i class='far fa-question-circle'></i></a>"
+  }, 
+  {
+    "id": "currency-symbol",
+    "columnName": "Currency Symbol",
+    "type": "text",
+    "mask": "{\"maxChar\":\"3\"}",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "currency",
+        "action": "hide"
+      }
+    ]
+  }, 
+  {
+    "id": "thousand-seperator",
+    "columnName": "Thousand separator",
+    "type": "drop down list",
+    "dropdownValues": [
+      {
+        "label": "None",
+        "value": "none"
+      }, {
+        "label": "Space",
+        "value": "space"
+      }, {
+        "label": "Comma",
+        "value": "comma"
+      }
+    ],
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "currency,integer,number",
+        "action": "hide"
+      }
+    ],
+    "default value": "none",
+    "mandatory":  true
+  }, 
+  {
+    "id": "min-char",
+    "columnName": "Min Characters",
+    "type": "integer",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "text",
+        "action": "hide"
+      }
+    ]
+  }, 
+  {
+    "id": "max-char",
+    "columnName": "Max Characters",
+    "type": "integer",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "text",
+        "action": "hide"
+      }
+    ]
+  }, 
+  {
+    "id": "now",
+    "columnName": "Default to current date and time",
+    "type": "checkbox",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "clock,date,date time",
+        "action": "hide"
+      }
+    ]
+  }, 
+  {
+    "id": "from-table",
+    "columnName": "Select a table",
+    "type": "drop down list",
+    "dropdownValues": [],
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "from table",
+        "action": "hide"
+      }
+    ],
+    "mandatory": true
+  },
+  {
+    "id": "whole-number",
+    "columnName": "Is this a whole number?",
+    "type": "checkbox",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "integer,number",
+        "action": "hide"
+      }
+    ]
+  }, 
+  {
+    "id": "is-calculated",
+    "columnName": "Is this a calculated column?",
+    "type": "checkbox",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "not in",
+        "value": "text,number,currency,longtext,timer",
+        "action": "hide"
+      }
+    ]
+  }, 
+  {
+    "id": "is-mandatory",
+    "columnName": "Is this a mandatory field?",
+    "type": "checkbox",
+    "displayLogic": [
+      { 
+        "columnId": "type",
+        "operation": "in",
+        "value": "checkbox",
+        "action": "hide"
+      }
+    ]
+  }, 
+  {
+    "id": "is-read-only",
+    "columnName": "Read Only",
+    "type": "checkbox"
+  }, 
+  {
+    "id": "tooltip",
+    "columnName": "Tooltip",
+    "type": "longtext"
+  }
+]
